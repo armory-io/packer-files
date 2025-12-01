@@ -25,7 +25,7 @@ source "amazon-ebs" "al2" {
   instance_type = "t3.micro"
   ssh_username  = "ec2-user"
 
-  ami_name = "my-basic-ami-${timestamp()}"
+  ami_name = "${clean_resource_name("my-ami-${timestamp()}")}"
 }
 
 build {
