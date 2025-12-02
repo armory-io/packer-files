@@ -24,7 +24,8 @@ source "amazon-ebs" "al2" {
 
   instance_type = "t3.micro"
   ssh_username  = "ec2-user"
-
+  vpc_id           = "vpc-0b262c20230d8f1e9"
+  subnet_id        = "subnet-0b98ed75706f9dea4"
   ami_name = "my-test-ami"
 }
 
