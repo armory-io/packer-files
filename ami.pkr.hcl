@@ -41,4 +41,7 @@ build {
       "sudo systemctl enable httpd"
     ]
   }
+ post-processor "manifest" {
+    output = "manifest.json"
+  }
 }
