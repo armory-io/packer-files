@@ -38,6 +38,8 @@ build {
       "echo 'Hello from Packer!'",
       "sudo yum update -y",
       "sudo yum install -y httpd",
+      "echo 'OK' | sudo tee /var/www/html/index.html",
+      "sudo chmod 644 /var/www/html/index.html",
       "sudo systemctl enable httpd"
     ]
   }
