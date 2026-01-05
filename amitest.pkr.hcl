@@ -43,7 +43,6 @@ source "amazon-ebs" "al2" {
 
   vpc_id    = "vpc-09216058ff8b25b5f"
   subnet_id = "subnet-03014bd375d7df245"
-  encrypted = false
   ami_name    = "my-test-ami-{{timestamp}}"
   ami_users   = var.ami_users
   ami_regions = var.ami_regions
