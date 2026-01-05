@@ -22,8 +22,8 @@ variable "ami_users" {
 variable "ami_regions" {
   type    = list(string)
   default = [
-    "us-east-1",
-    "us-west-2"
+    "us-west-2",
+    "us-east-1"
   ]
 }
 
