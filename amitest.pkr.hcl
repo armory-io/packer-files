@@ -9,7 +9,7 @@ packer {
 
 variable "aws_region" {
   type    = string
-  default = "us-west-2"
+  default = <+pipeline.variables.region>
 }
 
 variable "ami_users" {
@@ -23,7 +23,7 @@ variable "ami_users" {
 variable "ami_regions" {
   type    = list(string)
   default = [
-    "us-east-1"
+    <+pipeline.variables.copyToRegions>
   ]
 }
 
