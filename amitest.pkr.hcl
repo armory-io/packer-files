@@ -22,7 +22,6 @@ variable "ami_users" {
 variable "ami_regions" {
   type    = list(string)
   default = [
-    "us-west-2",
     "us-east-1"
   ]
 }
@@ -44,7 +43,6 @@ source "amazon-ebs" "al2" {
   vpc_id    = "vpc-09216058ff8b25b5f"
   subnet_id = "subnet-03014bd375d7df245"
   ami_name    = "my-test-ami-{{timestamp}}"
-  ami_users   = var.ami_users
   ami_regions = var.ami_regions
 }
 
