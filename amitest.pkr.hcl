@@ -23,7 +23,7 @@ variable "ami_users" {
 variable "ami_regions" {
   type    = list(string)
   default = [
-    ""
+    "us-east-1"
   ]
 }
 
