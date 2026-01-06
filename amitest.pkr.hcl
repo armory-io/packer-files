@@ -45,7 +45,6 @@ source "amazon-ebs" "al2" {
   subnet_id = "subnet-03014bd375d7df245"
   ami_name    = "my-test-ami-{{timestamp}}"
   ami_regions = var.ami_regions
-  }
 }
 
 build {
