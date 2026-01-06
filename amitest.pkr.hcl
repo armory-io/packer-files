@@ -15,7 +15,8 @@ variable "aws_region" {
 variable "ami_users" {
   type    = list(string)
   default = [
-    "170033264494"
+    "170033264494",
+    "568975057762"
   ]
 }
 
@@ -44,6 +45,7 @@ source "amazon-ebs" "al2" {
   subnet_id = "subnet-03014bd375d7df245"
   ami_name    = "my-test-ami-{{timestamp}}"
   ami_regions = var.ami_regions
+  ami_users   = var.ami_users
 }
 
 build {
