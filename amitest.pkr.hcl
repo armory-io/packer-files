@@ -45,13 +45,6 @@ source "amazon-ebs" "al2" {
   subnet_id = "subnet-03014bd375d7df245"
   ami_name    = "my-test-ami-{{timestamp}}"
   ami_regions = var.ami_regions
-  ami_users   = var.ami_users
-  launch_block_device_mappings {
-    device_name           = "/dev/xvda"
-    volume_size           = 8
-    volume_type           = "gp3"
-    encrypted             = false
-    delete_on_termination = true
   }
 }
 
