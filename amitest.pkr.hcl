@@ -19,7 +19,9 @@ variable "ami_users" {
     "568975057762"
   ]
 }
-
+variable "ami_tags" {
+  type = map(string)
+}
 variable "ami_regions" {
   type    = list(string)
   default = [
@@ -45,6 +47,7 @@ source "amazon-ebs" "al2" {
   subnet_id = "subnet-03014bd375d7df245"
   ami_name    = "my-test-ami-{{timestamp}}"
   ami_regions = var.ami_regions
+  tags = var.ami_tags
 }
 
 build {
